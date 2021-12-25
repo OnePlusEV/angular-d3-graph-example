@@ -2,12 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
-import { D3Service, D3_DIRECTIVES } from './d3';
+import { D3Service, D3_DIRECTIVES } from './services';
 
 import { AppComponent } from './app.component';
 
-import { GraphComponent } from './visuals/graph/graph.component';
-import { SHARED_VISUALS } from './visuals/shared';
+import { GraphComponent } from './components/graph/graph.component';
+import { SHARED_VISUALS } from './components';
 
 @NgModule({
   declarations: [

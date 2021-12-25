@@ -5,6 +5,6 @@ export * from './zoomable.directive';
 export * from './draggable.directive';
 
 export const D3_DIRECTIVES = [
-    ZoomableDirective,
-    DraggableDirective
+  ZoomableDirective,
+  DraggableDirective
 ];

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import APP_CONFIG from './app.config';
-import { Node, Link } from './d3';
+import { Node, Link } from './services';
 
 @Component({
   selector: 'app-root',
