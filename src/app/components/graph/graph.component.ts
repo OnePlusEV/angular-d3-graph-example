@@ -1,5 +1,9 @@
 import {Component, Input, ChangeDetectorRef, HostListener, ChangeDetectionStrategy, OnInit, AfterViewInit} from '@angular/core';
 import {D3Service, ForceDirectedGraph, Node, Link} from '../../services';
+import {MatDialog} from '@angular/material/dialog';
+import {ModalComponent} from '../modal/modal.component';
+
+
 
 @Component({
   selector: 'cor-graph',
@@ -20,7 +24,9 @@ export class GraphComponent implements OnInit, AfterViewInit {
   // }
 
 
-  constructor(private d3Service: D3Service, private ref: ChangeDetectorRef) {
+  constructor(private d3Service: D3Service,
+              private ref: ChangeDetectorRef,
+              public dialog: MatDialog) {
   }
 
   ngOnInit() {
@@ -44,6 +50,18 @@ export class GraphComponent implements OnInit, AfterViewInit {
 
   addLink() {
     this.graph.connectNodes(1, 2)
+  }
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(ModalComponent, {
+      width: '250px',
+      // data: {name: this.name, animal: this.animal},
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      // this.animal = result;
+    });
   }
 
   // Конфигурация графа

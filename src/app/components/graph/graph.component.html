@@ -6,5 +6,7 @@
   </g>
 </svg>
 
-<button (click)="addNode()">Add node</button>
-<button (click)="addLink()">Add Link</button>
+<div class="action-buttons">
+  <button mat-raised-button color="primary" (click)="addNode()">Add node</button>
+  <button mat-raised-button color="warn" (click)="openDialog()">Add Link</button>
+</div>
