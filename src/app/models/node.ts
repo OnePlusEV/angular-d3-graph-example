@@ -9,28 +9,19 @@ export class Node implements d3.SimulationNodeDatum {
   vy?: number;
   fx?: number | null;
   fy?: number | null;
+  label: string;
 
   id: string;
   linkCount: number = 0;
 
   constructor(id) {
     this.id = id;
-  }
-
-  normal = () => {
-    return Math.sqrt(this.linkCount / APP_CONFIG.N);
-  }
-
-  get r() {
-    return 50 * this.normal() + 10;
-  }
-
-  get fontSize() {
-    return (30 * this.normal() + 10) + 'px';
-  }
-
-  get color() {
-    let index = Math.floor(APP_CONFIG.SPECTRUM.length * this.normal());
-    return APP_CONFIG.SPECTRUM[index];
+    this.label = id
+    this.x = 0;
+    this.y = 0;
+    this.vx = 200;
+    this.vy = 200;
+    // this.fx = 400;
+    // this.fy = 400;
   }
 }

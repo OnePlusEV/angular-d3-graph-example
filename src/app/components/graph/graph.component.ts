@@ -1,5 +1,5 @@
-import { Component, Input, ChangeDetectorRef, HostListener, ChangeDetectionStrategy, OnInit, AfterViewInit } from '@angular/core';
-import { D3Service, ForceDirectedGraph, Node, Link } from '../../services';
+import {Component, Input, ChangeDetectorRef, HostListener, ChangeDetectionStrategy, OnInit, AfterViewInit} from '@angular/core';
+import {D3Service, ForceDirectedGraph, Node, Link} from '../../services';
 
 @Component({
   selector: 'cor-graph',
@@ -36,6 +36,14 @@ export class GraphComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     this.graph.initSimulation(this.options);
+  }
+
+  addNode() {
+    this.nodes.push(new Node(this.nodes.length))
+  }
+
+  addLink() {
+    this.graph.connectNodes(1, 2)
   }
 
   // Конфигурация графа
