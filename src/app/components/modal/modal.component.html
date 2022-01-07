@@ -1,12 +1,36 @@
-<h1 mat-dialog-title>Add Link</h1>
+<h1 mat-dialog-title>Добавить связь</h1>
 <div mat-dialog-content>
-  <p>What's your favorite animal?</p>
+  <p>Укеажите источник и цель для связи</p>
+
+<!--  <mat-form-field appearance="fill">-->
+<!--    <mat-label>Favorite Animal</mat-label>-->
+<!--    <input matInput [(ngModel)]="data.animal">-->
+<!--  </mat-form-field>-->
+<!--  <mat-form-field appearance="fill">-->
+<!--    <mat-label>Favorite Animal</mat-label>-->
+<!--    <input matInput [(ngModel)]="data.animal">-->
+<!--  </mat-form-field>-->
+
   <mat-form-field appearance="fill">
-    <mat-label>Favorite Animal</mat-label>
-    <input matInput [(ngModel)]="data.animal">
+    <mat-label> Источник </mat-label>
+    <mat-select [(value)]="source">
+      <mat-option *ngFor="let node of data.source" [value]="node.id">
+        {{node.label}}
+      </mat-option>
+    </mat-select>
   </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label> Цель </mat-label>
+    <mat-select [(value)]="target">
+      <mat-option *ngFor="let node of data.target" [value]="node.id">
+        {{node.label}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
 </div>
 <div mat-dialog-actions>
   <button mat-button (click)="onNoClick()">No Thanks</button>
-  <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>
+  <button mat-button [mat-dialog-close]="[source,target]" (click)="addLink()" cdkFocusInitial>Ok</button>
 </div>

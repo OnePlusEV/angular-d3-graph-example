@@ -4,7 +4,6 @@ import {MatDialog} from '@angular/material/dialog';
 import {ModalComponent} from '../modal/modal.component';
 
 
-
 @Component({
   selector: 'cor-graph',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -48,20 +47,22 @@ export class GraphComponent implements OnInit, AfterViewInit {
     this.nodes.push(new Node(this.nodes.length))
   }
 
-  addLink() {
-    this.graph.connectNodes(1, 2)
-  }
-
   openDialog(): void {
     const dialogRef = this.dialog.open(ModalComponent, {
       width: '250px',
+      data: {
+        source: this.nodes,
+        target: this.nodes,
+      }
       // data: {name: this.name, animal: this.animal},
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      // this.animal = result;
-    });
+      if (result) {
+        this.graph.connectNodes(result[0], result[1])
+      }
+      }
+    );
   }
 
   // Конфигурация графа
