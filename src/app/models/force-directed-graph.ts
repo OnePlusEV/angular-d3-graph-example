@@ -30,10 +30,16 @@ export class ForceDirectedGraph {
       throw new Error('One of the nodes does not exist');
     }
 
+    debugger;
     link = new Link(source, target);
     this.simulation.stop();
     this.links.push(link);
     this.simulation.alphaTarget(0.3).restart();
+    this.nodes[source].links.push(target);
+    this.nodes[source].linkCount++;
+
+    this.nodes[target].links.push(source);
+    this.nodes[source].linkCount++;
 
     this.initLinks();
   }

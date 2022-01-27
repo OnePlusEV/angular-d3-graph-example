@@ -1,1 +1,11 @@
-<cor-graph [nodes]="nodes" [links]="links"></cor-graph>
+
+<mat-sidenav-container>
+  <mat-sidenav mode="side" opened="true" style="background: #3F3F4F; max-width: 120px" fixedTopGap="56">
+    <app-side-nav *ngIf="sidebarState !== null"></app-side-nav>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <cor-graph [nodes]="nodes" [links]="links"></cor-graph>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

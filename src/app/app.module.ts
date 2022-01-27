@@ -15,6 +15,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSelectModule} from '@angular/material/select';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { SideNavComponent } from './components/side-nav/side-nav.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import {MatSelectModule} from '@angular/material/select';
     GraphComponent,
     ...SHARED_VISUALS,
     ...D3_DIRECTIVES,
-    ModalComponent
+    ModalComponent,
+    SideNavComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,8 @@ import {MatSelectModule} from '@angular/material/select';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    MatSelectModule
+    MatSelectModule,
+    MatSidenavModule
   ],
   providers: [D3Service],
   bootstrap: [AppComponent]

@@ -1,23 +1,25 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import APP_CONFIG from './app.config';
 import { Node, Link } from './services';
+import {SideNavService} from './services/side-nav.service';
 
 @Component({
   selector: 'cor-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit {
   nodes: Node[] = [];
   links: Link[] = [];
+  sidebarState: string;
 
-  constructor() {
+  constructor(private sidenav: SideNavService) {
     // const N = APP_CONFIG.N,
     //       getIndex = number => number - 1;
 
     /** constructing the nodes array */
-    for (let i = 1; i <= 5; i++) {
+    for (let i = 0; i <= 5; i++) {
       this.nodes.push(new Node(i));
     }
 
@@ -31,5 +33,12 @@ export class AppComponent {
     //     this.links.push(new Link(i, i * m));
     //   }
     // }
+  }
+
+  ngOnInit() {
+    this.sidenav.sidebarStateObservable$
+      .subscribe((newState: string) => {
+        this.sidebarState = newState;
+      });
   }
 }
