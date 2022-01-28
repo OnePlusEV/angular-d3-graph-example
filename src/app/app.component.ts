@@ -19,9 +19,6 @@ export class AppComponent implements OnInit {
     //       getIndex = number => number - 1;
 
     /** constructing the nodes array */
-    for (let i = 0; i <= 5; i++) {
-      this.nodes.push(new Node(i));
-    }
 
     // for (let i = 1; i <= 5; i++) {
     //   for (let m = 2; i * m <= 5; m++) {

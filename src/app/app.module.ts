@@ -17,6 +17,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatSelectModule} from '@angular/material/select';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { SideNavComponent } from './components/side-nav/side-nav.component';
+import { LandingComponent } from './components/landing/landing.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { SideNavComponent } from './components/side-nav/side-nav.component';
     ...SHARED_VISUALS,
     ...D3_DIRECTIVES,
     ModalComponent,
-    SideNavComponent
+    SideNavComponent,
+    LandingComponent
   ],
   imports: [
     BrowserModule,
