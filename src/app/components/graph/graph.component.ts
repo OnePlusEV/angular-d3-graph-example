@@ -12,8 +12,8 @@ import {ModalComponent} from '../modal/modal.component';
 })
 
 export class GraphComponent implements OnInit, AfterViewInit {
-  @Input() nodes: Node[];
-  @Input() links: Link[];
+  nodes: Node[] = [];
+  links: Link[] = [];
 
   public graph: ForceDirectedGraph;
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as feather from 'feather-icons';
 
 @Component({
   selector: 'app-landing',
@@ -10,6 +11,7 @@ export class LandingComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    feather.replace();
   }
 
 }

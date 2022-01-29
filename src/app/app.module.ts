@@ -18,6 +18,10 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { LandingComponent } from './components/landing/landing.component';
+import { AppRoutingModule } from './app-routing.module';
+import {RouterModule} from '@angular/router';
+import { EditComponent } from './components/edit/edit.component';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -27,19 +31,23 @@ import { LandingComponent } from './components/landing/landing.component';
     ...D3_DIRECTIVES,
     ModalComponent,
     SideNavComponent,
-    LandingComponent
+    LandingComponent,
+    EditComponent
   ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    BrowserAnimationsModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    MatSelectModule,
-    MatSidenavModule
-  ],
+    imports: [
+        BrowserModule,
+        FormsModule,
+        BrowserAnimationsModule,
+        MatDialogModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatButtonModule,
+        MatSelectModule,
+        MatSidenavModule,
+        AppRoutingModule,
+        RouterModule,
+        MatCardModule
+    ],
   providers: [D3Service],
   bootstrap: [AppComponent]
 })

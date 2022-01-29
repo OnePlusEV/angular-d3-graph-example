@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import APP_CONFIG from './app.config';
 import { Node, Link } from './services';
 import {SideNavService} from './services/side-nav.service';
+import * as feather from 'feather-icons';
 
 @Component({
   selector: 'cor-root',
@@ -10,11 +11,8 @@ import {SideNavService} from './services/side-nav.service';
 })
 
 export class AppComponent implements OnInit {
-  nodes: Node[] = [];
-  links: Link[] = [];
-  sidebarState: string;
 
-  constructor(private sidenav: SideNavService) {
+  constructor() {
     // const N = APP_CONFIG.N,
     //       getIndex = number => number - 1;
 
@@ -33,9 +31,6 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.sidenav.sidebarStateObservable$
-      .subscribe((newState: string) => {
-        this.sidebarState = newState;
-      });
+    feather.replace();
   }
 }

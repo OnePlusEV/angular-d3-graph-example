@@ -1,10 +1,12 @@
-<svg #svg [attr.width]="options.width" [attr.height]="options.height">
-  <g [zoomableOf]="svg">
-    <g [cor-link]="link" *ngFor="let link of links"></g>
-    <g [cor-node]="node" *ngFor="let node of nodes"
-       [draggableNode]="node" [draggableInGraph]="graph"></g>
-  </g>
-</svg>
+<div class="wrapper">
+  <svg #svg [attr.width]="options.width" [attr.height]="options.height" class="canvas">
+    <g [zoomableOf]="svg">
+      <g [cor-link]="link" *ngFor="let link of links"></g>
+      <g [cor-node]="node" *ngFor="let node of nodes"
+         [draggableNode]="node" [draggableInGraph]="graph"></g>
+    </g>
+  </svg>
+</div>
 
 <div class="action-buttons">
   <button mat-raised-button color="primary" (click)="addNode()">Add node</button>
