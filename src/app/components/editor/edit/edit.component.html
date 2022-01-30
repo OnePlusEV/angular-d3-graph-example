@@ -1,0 +1,10 @@
+<mat-sidenav-container>
+  <mat-sidenav position="end" mode="side" opened="true" style="background: #3F3F4F; max-width: 120px" fixedTopGap="56">
+    <cor-side-nav *ngIf="sidebarState !== null"></cor-side-nav>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <cor-graph></cor-graph>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

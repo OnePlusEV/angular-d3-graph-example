@@ -1,5 +1,5 @@
 import {Component, Input, ChangeDetectorRef, HostListener, ChangeDetectionStrategy, OnInit, AfterViewInit} from '@angular/core';
-import {D3Service, ForceDirectedGraph, Node, Link} from '../../services';
+import {D3Service, ForceDirectedGraph, Node, Link} from '../../../services';
 import {MatDialog} from '@angular/material/dialog';
 import {ModalComponent} from '../modal/modal.component';
 

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Link } from '../../services';
+import { Link } from '../../../services';
 
 @Component({
   selector: '[cor-link]',

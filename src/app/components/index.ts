@@ -1,8 +1,8 @@
-export * from './node/node.component';
-export * from './link/link.component';
+export * from './editor/node/node.component';
+export * from './editor/link/link.component';
 
-import { NodeComponent } from './node/node.component';
-import { LinkComponent } from './link/link.component';
+import { NodeComponent } from './editor/node/node.component';
+import { LinkComponent } from './editor/link/link.component';
 
 export const SHARED_VISUALS = [
     NodeComponent,

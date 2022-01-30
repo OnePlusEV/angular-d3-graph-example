@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {SideNavService} from '../../services/side-nav.service';
+import {SideNavService} from '../../../services/side-nav.service';
 
 @Component({
   selector: 'cor-side-nav',

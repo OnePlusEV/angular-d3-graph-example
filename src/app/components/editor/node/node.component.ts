@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { Node } from '../../services';
-import {SideNavService} from '../../services/side-nav.service';
+import { Node } from '../../../services';
+import {SideNavService} from '../../../services/side-nav.service';
 
 @Component({
   selector: '[cor-node]',

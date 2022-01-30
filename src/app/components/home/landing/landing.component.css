@@ -2,7 +2,7 @@
   background-color: #23252f;
   min-height: 1vh;
   padding: 200px;
-  background-image: url("~assets/landing-layout.png");
+  background-image: url("../../../../assets/landing-layout.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -27,7 +27,7 @@
   background-size: cover;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-image: url("~assets/logo_bg.jpg");
+  background-image: url("../../../../assets/logo_bg.jpg");
 }
 
 .text {
