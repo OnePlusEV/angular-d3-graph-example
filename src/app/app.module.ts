@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 
 import { GraphComponent } from './components/editor/graph/graph.component';
 import { SHARED_VISUALS } from './components';
-import { ModalComponent } from './components/editor/modal/modal.component';
+import { EditorModalComponent } from './components/editor/modal/editor-modal.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -31,7 +31,7 @@ import {MatIconModule} from '@angular/material/icon';
     GraphComponent,
     ...SHARED_VISUALS,
     ...D3_DIRECTIVES,
-    ModalComponent,
+    EditorModalComponent,
     SideNavComponent,
     LandingComponent,
     EditComponent,

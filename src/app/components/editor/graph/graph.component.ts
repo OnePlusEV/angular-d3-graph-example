@@ -2,7 +2,7 @@ import {Component, ChangeDetectorRef, ChangeDetectionStrategy, OnInit, AfterView
 import {MatDialog} from '@angular/material/dialog';
 
 import {D3Service, ForceDirectedGraph, Node, Link} from '../../../services';
-import {ModalComponent} from '../modal/modal.component';
+import {EditorModalComponent} from '../modal/editor-modal.component';
 
 
 @Component({
@@ -30,7 +30,7 @@ export class GraphComponent implements OnInit, AfterViewInit {
     this.graph = this.d3Service.getForceDirectedGraph(this.nodes, this.links, this.options);
 
     // Симуляция
-    this.graph.ticker.subscribe((d) => {
+    this.graph.ticker.subscribe(() => {
       this.ref.markForCheck();
     });
   }
@@ -44,7 +44,7 @@ export class GraphComponent implements OnInit, AfterViewInit {
   }
 
   openDialog(): void {
-    const dialogRef = this.dialog.open(ModalComponent, {
+    const dialogRef = this.dialog.open(EditorModalComponent, {
       width: '250px',
       data: {
         source: this.nodes,
