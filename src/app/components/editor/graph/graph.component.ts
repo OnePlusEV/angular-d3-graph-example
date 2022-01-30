@@ -1,6 +1,7 @@
-import {Component, Input, ChangeDetectorRef, HostListener, ChangeDetectionStrategy, OnInit, AfterViewInit} from '@angular/core';
-import {D3Service, ForceDirectedGraph, Node, Link} from '../../../services';
+import {Component, ChangeDetectorRef, ChangeDetectionStrategy, OnInit, AfterViewInit} from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
+
+import {D3Service, ForceDirectedGraph, Node, Link} from '../../../services';
 import {ModalComponent} from '../modal/modal.component';
 
 
@@ -16,11 +17,6 @@ export class GraphComponent implements OnInit, AfterViewInit {
   links: Link[] = [];
 
   public graph: ForceDirectedGraph;
-
-  // @HostListener('window:resize', ['$event'])
-  // onResize(event) {
-  //   this.graph.initSimulation(this.options);
-  // }
 
 
   constructor(private d3Service: D3Service,

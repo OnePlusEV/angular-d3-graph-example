@@ -1,5 +1,6 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+
 import { ForceDirectedGraph } from '../../../models';
 
 @Component({
@@ -22,10 +23,6 @@ export class ModalComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-  }
-
-  addLink() {
-   // this.graph.connectNodes(this.source, this.target)
   }
 
   onNoClick(): void {
