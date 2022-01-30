@@ -1,0 +1,16 @@
+<div class="row cards-container">
+  <div *ngFor="let item of items" class="col-lg-4 col-md-6 mt-4 pt-2 card">
+    <div class="logo-card">
+      <mat-icon class="f-46" aria-hidden="false" aria-label="Example home icon">{{item.icon}}</mat-icon>
+    </div>
+    <div class="header-card">
+      {{item.title}}
+    </div>
+    <p class="text-card">
+      {{item.text}}
+    </p>
+
+    <button class="card-button" mat-button color="primary"> Подробнее >> </button>
+
+  </div>
+</div>

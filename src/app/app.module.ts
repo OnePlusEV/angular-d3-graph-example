@@ -22,6 +22,8 @@ import { AppRoutingModule } from './app-routing.module';
 import {RouterModule} from '@angular/router';
 import { EditComponent } from './components/edit/edit.component';
 import {MatCardModule} from '@angular/material/card';
+import { CardComponent } from './components/card/card.component';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -32,22 +34,24 @@ import {MatCardModule} from '@angular/material/card';
     ModalComponent,
     SideNavComponent,
     LandingComponent,
-    EditComponent
+    EditComponent,
+    CardComponent
   ],
-    imports: [
-        BrowserModule,
-        FormsModule,
-        BrowserAnimationsModule,
-        MatDialogModule,
-        MatFormFieldModule,
-        MatInputModule,
-        MatButtonModule,
-        MatSelectModule,
-        MatSidenavModule,
-        AppRoutingModule,
-        RouterModule,
-        MatCardModule
-    ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatSelectModule,
+    MatSidenavModule,
+    AppRoutingModule,
+    RouterModule,
+    MatCardModule,
+    MatIconModule
+  ],
   providers: [D3Service],
   bootstrap: [AppComponent]
 })
